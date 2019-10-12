@@ -7,7 +7,7 @@ Mostly stolen from [fbosch](https://github.com/fbosch)s' cool package [rune-conv
 ## Import
 ``` typescript
 
-  import { transcribe } from 'https://denopkg.com/lasseborly/deno_rune_converter@0.0.1/mod.ts'
+  import { transcribe } from "https://denopkg.com/lasseborly/deno_rune_converter@0.0.2/mod.ts";
 
 ```
 
@@ -36,12 +36,14 @@ Mostly stolen from [fbosch](https://github.com/fbosch)s' cool package [rune-conv
 ### Example
 ``` typescript
 
-  const lokisLastWords = 'You will never be a god.'
+  import { transcribe } from "https://denopkg.com/lasseborly/deno_rune_converter@0.0.2/mod.ts";
 
-  transcribe(lokisLastWords) // ᛃᛟᚢ᛬ᚹᛁᛚᛚ᛬ᚾᛖᚠᛖᚱ᛬ᛒᛖ᛬ᚨ᛬ᚷᛟᛞ᛭
+  const lokisLastWords = "You will never be a god.";
 
-  transcribe(lokisLastWords, { punctuation: 'single' }) // ᛃᛟᚢ᛬ᚹᛁᛚᛚ᛬ᚾᛖᚠᛖᚱ᛬ᛒᛖ᛬ᚨ᛬ᚷᛟᛞ᛫
+  transcribe(lokisLastWords); // ᛃᛟᚢ᛬ᚹᛁᛚᛚ᛬ᚾᛖᚠᛖᚱ᛬ᛒᛖ᛬ᚨ᛬ᚷᛟᛞ᛭
 
-  transcribe(lokisLastWords, { spacing: 'normal' }) // ᛃᛟᚢ ᚹᛁᛚᛚ ᚾᛖᚠᛖᚱ ᛒᛖ ᚨ ᚷᛟᛞ᛭
+  transcribe(lokisLastWords, { punctuation: "single" }); // ᛃᛟᚢ᛬ᚹᛁᛚᛚ᛬ᚾᛖᚠᛖᚱ᛬ᛒᛖ᛬ᚨ᛬ᚷᛟᛞ᛫
+
+  transcribe(lokisLastWords, { spacing: "normal" }); // ᛃᛟᚢ ᚹᛁᛚᛚ ᚾᛖᚠᛖᚱ ᛒᛖ ᚨ ᚷᛟᛞ᛭
 
 ```
